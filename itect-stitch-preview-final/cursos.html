@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Catálogo de Cursos - ITECT</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dde1ff",
+                        "outline-variant": "#c3c5d9",
+                        "on-tertiary-container": "#ffddd5",
+                        "on-surface-variant": "#434656",
+                        "background": "#f7f9fc",
+                        "surface-container-low": "#f2f4f7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#952200",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#eff1f4",
+                        "inverse-primary": "#b7c4ff",
+                        "surface-dim": "#d8dadd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e0e3e6",
+                        "on-secondary-fixed": "#001946",
+                        "error": "#ba1a1a",
+                        "outline": "#737688",
+                        "on-tertiary-fixed": "#3c0800",
+                        "secondary-fixed": "#dae2ff",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-background": "#191c1e",
+                        "surface-bright": "#f7f9fc",
+                        "primary-container": "#0052ff",
+                        "surface-tint": "#004ced",
+                        "on-tertiary-fixed-variant": "#891e00",
+                        "surface-container": "#eceef1",
+                        "on-surface": "#191c1e",
+                        "tertiary-container": "#bf3003",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "on-secondary-container": "#204287",
+                        "tertiary-fixed-dim": "#ffb4a1",
+                        "surface": "#f7f9fc",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed": "#ffdbd2",
+                        "primary": "#003ec7",
+                        "on-primary-fixed": "#001452",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-primary-container": "#dfe3ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "on-error-container": "#93000a",
+                        "secondary": "#3d5ca2",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e8eb",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#94b2fe",
+                        "on-secondary-fixed-variant": "#224489"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .nav-link-hover::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: theme('colors.primary');
+            transition: width 0.3s ease;
+        }
+        .nav-link-hover:hover::after {
+            width: 100%;
+        }
+        
+        /* Subtle Grid Pattern for Hero */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, theme('colors.outline-variant') 1px, transparent 1px),
+                              linear-gradient(to bottom, theme('colors.outline-variant') 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col pt-20">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface-container/80 backdrop-blur-md border-b border-outline-variant/30 dark:border-outline/20 shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop max-w-max-width mx-auto h-20">
+<!-- Brand -->
+<div class="flex items-center gap-3">
+<img alt="ITECT Logo" class="h-10 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPI8zcQk8K2BGq416AiRYXEiH8BP7CtNt22aRDtPz5cB_rZTRmvIffOR7ioFJ-9MGDPSUc6eiYuKZTklXs6oUBl7g-Dd33dqerESiaBLukkdorz_2v2_yiZdiTi-FHAxN8ZaEh1I9XdIHP_JFALDsTVgpF1oXDPC2Q0KROpo1i4I-UG6M-IKsXYV0WNTZg11MXNRsjqEOUpZ2VHHUH0ioFxxRLzFF2YiMJCwsnWDIbsCoqiZ6zaPNgMdLy59CbnkjhahmUluhrIaM"/>
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tight hidden sm:block">ITECT</span>
+</div>
+<!-- Navigation Links (Desktop) -->
+<div class="hidden md:flex items-center gap-8">
+<a class="font-body-md text-body-md font-medium text-on-surface-variant hover:text-primary transition-colors relative nav-link-hover" href="#">Inicio</a>
+<!-- Active Nav Item -->
+<a class="font-body-md text-body-md font-medium text-primary border-b-2 border-primary pb-1" href="#">Cursos</a>
+<a class="font-body-md text-body-md font-medium text-on-surface-variant hover:text-primary transition-colors relative nav-link-hover" href="#">Nosotros</a>
+<a class="font-body-md text-body-md font-medium text-on-surface-variant hover:text-primary transition-colors relative nav-link-hover" href="#">Beneficios</a>
+<a class="font-body-md text-body-md font-medium text-on-surface-variant hover:text-primary transition-colors relative nav-link-hover" href="#">Contacto</a>
+</div>
+<!-- Trailing Action -->
+<button class="font-body-md text-body-md font-medium bg-primary text-on-primary px-6 py-2 rounded-lg hover:bg-on-primary-fixed-variant active:scale-95 duration-200 transition-all shadow-sm">
+                Inscríbete
+            </button>
+</div>
+</nav>
+<!-- Main Canvas -->
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative pt-20 pb-16 px-margin-mobile md:px-margin-desktop overflow-hidden border-b border-surface-variant">
+<div class="absolute inset-0 bg-grid-pattern pointer-events-none"></div>
+<div class="max-w-max-width mx-auto relative z-10 text-center">
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background mb-4">Catálogo de Cursos</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-8">
+                    Potencia tu carrera profesional con nuestros programas de formación especializada en tecnología y diseño.
+                </p>
+<!-- Filters -->
+<div class="flex flex-wrap justify-center gap-4">
+<button class="font-label-md text-label-md px-6 py-2 rounded-full bg-primary text-on-primary shadow-sm border border-primary transition-all">Todos</button>
+<button class="font-label-md text-label-md px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary hover:text-primary transition-all">Desarrollo</button>
+<button class="font-label-md text-label-md px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary hover:text-primary transition-all">Diseño</button>
+<button class="font-label-md text-label-md px-6 py-2 rounded-full bg-surface-container-lowest text-on-surface-variant border border-outline-variant hover:border-primary hover:text-primary transition-all">IT</button>
+</div>
+</div>
+</section>
+<!-- Course Grid -->
+<section class="py-16 px-margin-mobile md:px-margin-desktop bg-background">
+<div class="max-w-max-width mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] border border-surface-variant hover:shadow-[0px_12px_32px_rgba(10,25,47,0.12)] hover:border-primary transition-all duration-300 transform hover:-translate-y-1 flex flex-col overflow-hidden">
+<div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden" data-alt="A macro shot of a computer screen displaying colorful glowing lines of code in a dark room. The lighting is moody and technological, focusing on the syntax highlighting. The aesthetic conveys deep technical knowledge and modern software development practices." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA4MsV_wT17IY8zfR14jcOpPcGKk8SgNxiePTF6qG44wf_sVE4fJWR51eebS5q2ZCwO4ipp0mBPAI300bImz8yIxZOQM7laa0W1zV8AMV2abix7hVXYGQh5u_abDKsa-IQnXKt0hNMy-pZwOD2DBR5efz-r7wCLSPZw2DjnTQMpJbRa1LcgOHnH2ik3jTlKCGTx3x_AzxHHIIk6neGnJ9Pk5MrRG6uwbUCzctWPTsofqEZ0oIIRrhCiuiTg3X2HlS3EIQQOTcpAhY4'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex gap-2 mb-3">
+<span class="font-label-md text-label-md text-[12px] bg-secondary-container text-on-secondary-container px-2 py-1 rounded">Desarrollo</span>
+<span class="font-label-md text-label-md text-[12px] bg-surface-variant text-on-surface-variant px-2 py-1 rounded flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">laptop_mac</span> Virtual</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Desarrollo Web Full Stack</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Aprende a construir aplicaciones web completas desde cero utilizando las últimas tecnologías del mercado (React, Node.js).</p>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-sm text-outline">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt</span>
+<span class="font-label-md text-label-md">Nivel: Avanzado</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-outline mb-6">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span class="font-label-md text-label-md">Certificación Oficial</span>
+</div>
+<button class="w-full font-body-md text-body-md font-medium text-primary border-2 border-primary rounded-lg py-2.5 hover:bg-primary/10 transition-colors">
+                                    Solicitar información
+                                </button>
+</div>
+</div>
+</article>
+<!-- Card 2 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] border border-surface-variant hover:shadow-[0px_12px_32px_rgba(10,25,47,0.12)] hover:border-primary transition-all duration-300 transform hover:-translate-y-1 flex flex-col overflow-hidden">
+<div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden" data-alt="A professional workspace setup featuring a large monitor displaying vibrant graphic design work, accompanied by a digital drawing tablet and stylus. The scene is brightly lit with natural light, creating an inviting, creative atmosphere. The visual style emphasizes clean, modern design tools and aesthetic precision." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCRDlRNMoQQOBgbyhCNgMD7jUVxrczTKPHKAI-IGix5dY_7AeSP9Xa-nkHOYf54VjW4aqzw2TKZMXz49aMLe7hMgtcq5Av6o5MDkp98-DkPxKGiFZDupujYTz2Mh9fwyHTeoxTafocXV2ctxeQ6V1ldqMkANvUdSN1iwCVCJNHXy3GUZH0QqojOfgZvWwLTh340lsG7HPTMCbE2aRL7RIxzMjZERYX8fhnA6gPVOR8zbgOTitLF1XedWj09Cx-kjfdR0rDlkoGmQbk'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex gap-2 mb-3">
+<span class="font-label-md text-label-md text-[12px] bg-tertiary-container text-on-tertiary-container px-2 py-1 rounded">Diseño</span>
+<span class="font-label-md text-label-md text-[12px] bg-surface-variant text-on-surface-variant px-2 py-1 rounded flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">laptop_mac</span> Virtual</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Diseño UX/UI Avanzado</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Domina la creación de interfaces intuitivas y experiencias de usuario centradas en la accesibilidad y conversión.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-sm text-outline">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt_2_bar</span>
+<span class="font-label-md text-label-md">Nivel: Intermedio</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-outline mb-6">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span class="font-label-md text-label-md">Certificación Oficial</span>
+</div>
+<button class="w-full font-body-md text-body-md font-medium text-primary border-2 border-primary rounded-lg py-2.5 hover:bg-primary/10 transition-colors">
+                                    Solicitar información
+                                </button>
+</div>
+</div>
+</article>
+<!-- Card 3 -->
+<article class="bg-surface-container-lowest rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] border border-surface-variant hover:shadow-[0px_12px_32px_rgba(10,25,47,0.12)] hover:border-primary transition-all duration-300 transform hover:-translate-y-1 flex flex-col overflow-hidden">
+<div class="h-40 bg-surface-container flex items-center justify-center relative overflow-hidden" data-alt="A dense rack of server equipment in a data center, glowing with small green and blue LED status lights. The deep perspective lines draw the eye into the technical infrastructure. The lighting is cool and industrial, emphasizing robustness, networking, and enterprise IT environments." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkpawyTaqEnX95Z1rjnQOjayIhQksVvg7bPJHDorlMKNukZQsY9fac5Zzo4nqjlQDS8xJc1SN509P2BuzvqhaFk5Rkv1lLz2LgDp4LUXrZX8D5MYGHJLnBcelmaHMzxXJcweTUMBl1EpR4G9HxtDddLh1j6oaHwiQb-utBaNYQCvOHO-vgxqRND5XNCZ2nwd5mQWle_jJ2VPLT7aWgTbm9mh4zNg1iKYUjDwp0QeqfKdC9tGh99H0ox5I-eFniPR0Y86HBSH7tV10'); background-size: cover; background-position: center;">
+<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px]"></div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex gap-2 mb-3">
+<span class="font-label-md text-label-md text-[12px] bg-primary-container text-on-primary-container px-2 py-1 rounded">IT</span>
+<span class="font-label-md text-label-md text-[12px] bg-surface-variant text-on-surface-variant px-2 py-1 rounded flex items-center gap-1"><span class="material-symbols-outlined text-[14px]">laptop_mac</span> Virtual</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-2">Administración de Redes</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 flex-grow">Conviértete en un experto en configuración, mantenimiento y seguridad de infraestructuras de red corporativas.</p>
+<div class="space-y-4">
+<div class="flex items-center gap-2 text-sm text-outline">
+<span class="material-symbols-outlined text-[18px]">signal_cellular_alt_1_bar</span>
+<span class="font-label-md text-label-md">Nivel: Básico</span>
+</div>
+<div class="flex items-center gap-2 text-sm text-outline mb-6">
+<span class="material-symbols-outlined text-[18px]">workspace_premium</span>
+<span class="font-label-md text-label-md">Certificación Cisco</span>
+</div>
+<button class="w-full font-body-md text-body-md font-medium text-primary border-2 border-primary rounded-lg py-2.5 hover:bg-primary/10 transition-colors">
+                                    Solicitar información
+                                </button>
+</div>
+</div>
+</article>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-highest dark:bg-inverse-surface mt-auto border-t border-surface-variant">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1 mb-8 md:mb-0">
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface block mb-4">ITECT</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant">
+                    © 2024 ITECT Instituto Tecnológico. Todos los derechos reservados.
+                </p>
+</div>
+<!-- Spacer to push links right if needed, or distribute -->
+<div class="col-span-1 hidden md:block"></div>
+<!-- Links Columns -->
+<div class="col-span-1 md:col-span-2 flex flex-col md:flex-row justify-end gap-8 md:gap-16">
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all hover:opacity-80" href="#">Aviso Legal</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all hover:opacity-80" href="#">Política de Privacidad</a>
+</div>
+<div class="flex flex-col gap-3">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all hover:opacity-80" href="#">Cookies</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all hover:opacity-80" href="#">Términos de Servicio</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

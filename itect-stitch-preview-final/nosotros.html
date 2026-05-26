@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nosotros - ITECT</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#dde1ff",
+                        "outline-variant": "#c3c5d9",
+                        "on-tertiary-container": "#ffddd5",
+                        "on-surface-variant": "#434656",
+                        "background": "#f7f9fc",
+                        "surface-container-low": "#f2f4f7",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#952200",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#eff1f4",
+                        "inverse-primary": "#b7c4ff",
+                        "surface-dim": "#d8dadd",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#e0e3e6",
+                        "on-secondary-fixed": "#001946",
+                        "error": "#ba1a1a",
+                        "outline": "#737688",
+                        "on-tertiary-fixed": "#3c0800",
+                        "secondary-fixed": "#dae2ff",
+                        "surface-container-highest": "#e0e3e6",
+                        "on-background": "#191c1e",
+                        "surface-bright": "#f7f9fc",
+                        "primary-container": "#0052ff",
+                        "surface-tint": "#004ced",
+                        "on-tertiary-fixed-variant": "#891e00",
+                        "surface-container": "#eceef1",
+                        "on-surface": "#191c1e",
+                        "tertiary-container": "#bf3003",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "on-secondary-container": "#204287",
+                        "tertiary-fixed-dim": "#ffb4a1",
+                        "surface": "#f7f9fc",
+                        "inverse-surface": "#2d3133",
+                        "tertiary-fixed": "#ffdbd2",
+                        "primary": "#003ec7",
+                        "on-primary-fixed": "#001452",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-primary-container": "#dfe3ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#0038b6",
+                        "on-error-container": "#93000a",
+                        "secondary": "#3d5ca2",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#e6e8eb",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#94b2fe",
+                        "on-secondary-fixed-variant": "#224489"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "max-width": "1280px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-xl": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Hanken Grotesk"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-xl": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-xl-mobile": ["36px", { "lineHeight": "44px", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .pattern-circuits {
+            background-image: radial-gradient(theme('colors.primary-fixed') 1px, transparent 1px), radial-gradient(theme('colors.primary-fixed') 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: 0 0, 20px 20px;
+            opacity: 0.3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-20">
+<!-- TopNavBar Component -->
+<nav class="bg-surface/80 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop max-w-max-width mx-auto h-20">
+<!-- Brand -->
+<a class="flex items-center gap-2 font-headline-md text-headline-md font-bold text-primary tracking-tight" href="#">
+<img alt="ITECT Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPI8zcQk8K2BGq416AiRYXEiH8BP7CtNt22aRDtPz5cB_rZTRmvIffOR7ioFJ-9MGDPSUc6eiYuKZTklXs6oUBl7g-Dd33dqerESiaBLukkdorz_2v2_yiZdiTi-FHAxN8ZaEh1I9XdIHP_JFALDsTVgpF1oXDPC2Q0KROpo1i4I-UG6M-IKsXYV0WNTZg11MXNRsjqEOUpZ2VHHUH0ioFxxRLzFF2YiMJCwsnWDIbsCoqiZ6zaPNgMdLy59CbnkjhahmUluhrIaM"/>
+                ITECT
+            </a>
+<!-- Navigation Links -->
+<div class="hidden md:flex gap-8 font-body-md text-body-md font-medium">
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 rounded-lg px-3 py-2 active:scale-95 duration-200" href="#">Inicio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 rounded-lg px-3 py-2 active:scale-95 duration-200" href="#">Cursos</a>
+<a class="text-primary border-b-2 border-primary pb-1 px-3 py-2" href="#">Nosotros</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 rounded-lg px-3 py-2 active:scale-95 duration-200" href="#">Beneficios</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors hover:bg-primary/5 rounded-lg px-3 py-2 active:scale-95 duration-200" href="#">Contacto</a>
+</div>
+<!-- Trailing Action -->
+<button class="hidden md:flex bg-primary text-on-primary font-bold font-body-md text-body-md px-6 py-2 rounded-lg hover:bg-primary/90 transition-colors shadow-sm">
+                Inscríbete
+            </button>
+<!-- Mobile Menu Icon -->
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative py-24 md:py-32 overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 pattern-circuits pointer-events-none"></div>
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop relative z-10 flex flex-col items-center text-center">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-fixed/30 text-primary font-label-md text-label-md rounded-full mb-6 border border-primary/20">
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+<span>Nuestra Historia</span>
+</div>
+<h1 class="font-headline-xl-mobile md:font-headline-xl text-headline-xl-mobile md:text-headline-xl text-on-background mb-6 max-w-4xl">
+                    Formando a los líderes tecnológicos del mañana.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                    Somos el puente entre el talento y la innovación. En ITECT, creemos que la educación tecnológica de calidad es el motor del progreso digital.
+                </p>
+</div>
+</section>
+<!-- History / Who We Are -->
+<section class="py-20 bg-background">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">Quiénes Somos</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                            Nacimos con una premisa clara: el mundo digital avanza más rápido que la educación tradicional. ITECT se fundó para cerrar esa brecha, ofreciendo programas de formación intensivos, prácticos y alineados con las necesidades reales de la industria tecnológica.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                            Nuestro enfoque metodológico se basa en la resolución de problemas reales, preparando a nuestros estudiantes no solo para escribir código, sino para diseñar soluciones robustas y escalables.
+                        </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-background">Metodología 100% práctica y orientada a proyectos.</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<span class="font-body-md text-body-md text-on-background">Instructores activos en la industria tecnológica top.</span>
+</li>
+</ul>
+</div>
+<div class="relative h-[500px] rounded-xl overflow-hidden shadow-[0px_4px_20px_rgba(10,25,47,0.05)] border border-outline-variant/20">
+<img alt="A group of diverse, focused students collaborating on a coding project in a modern, well-lit tech workspace. The environment features sleek glass panels, ergonomic furniture, and multiple monitors displaying lines of code. The lighting is bright and natural, creating a professional, corporate modern aesthetic typical of a high-end tech startup or educational institute. The overall mood is dynamic, collaborative, and technologically vibrant, utilizing a color palette dominated by pristine whites, professional grays, and subtle accents of electric blue to signify innovation and precision." class="w-full h-full object-cover" data-alt="A group of diverse, focused students collaborating on a coding project in a modern, well-lit tech workspace. The environment features sleek glass panels, ergonomic furniture, and multiple monitors displaying lines of code. The lighting is bright and natural, creating a professional, corporate modern aesthetic typical of a high-end tech startup or educational institute. The overall mood is dynamic, collaborative, and technologically vibrant, utilizing a color palette dominated by pristine whites, professional grays, and subtle accents of electric blue to signify innovation and precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd_1Im44esyOIkIkOJsixCwUZzr1LLIw8F2W0CsmtHZ7px_he3NPGxna-dxjSITIlnbeOX-yU39PUdJxHMufg0ZYoHrucnKTIElJXoQ1u37riz_HH7_CSQ1cv_bn22J3mOKPzrtGolyMhdBwZ9KHlgzYbM-zzgDz6BhYL3OsgQN3_QK2_j8hrPhEE0RGVY9lQ-E4lpyYqS0zYdWC9pLnLtqez3os82vl01XoihW4uNaTBH5JEEtid2iDNxDNWAnpd8OCVKcgoXVGE"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision Bento Grid -->
+<section class="py-20 bg-surface-container-low">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Misión -->
+<div class="bg-surface p-10 rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] border border-outline-variant/30 hover:shadow-[0px_12px_32px_rgba(10,25,47,0.12)] hover:-translate-y-1 transition-all duration-300">
+<div class="w-14 h-14 bg-primary-fixed rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">rocket_launch</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-background mb-4">Misión</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Empoderar a profesionales y entusiastas de la tecnología mediante una educación de excelencia, accesible y actualizada, que impulse su desarrollo profesional y contribuya a la transformación digital de la sociedad.
+                        </p>
+</div>
+<!-- Visión -->
+<div class="bg-primary text-on-primary p-10 rounded-xl shadow-[0px_4px_20px_rgba(10,25,47,0.05)] hover:shadow-[0px_12px_32px_rgba(10,25,47,0.12)] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+<div class="absolute top-0 right-0 pattern-circuits opacity-20 w-full h-full pointer-events-none"></div>
+<div class="relative z-10">
+<div class="w-14 h-14 bg-on-primary/10 rounded-lg flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-primary text-3xl">visibility</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-primary mb-4">Visión</h3>
+<p class="font-body-md text-body-md text-on-primary/90">
+                                Ser el instituto tecnológico referente a nivel global, reconocido por la excelencia de nuestros egresados, la innovación constante en nuestros planes de estudio y nuestro impacto positivo en el ecosistema tecnológico.
+                            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Valores Corporativos -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="max-w-max-width mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-4">Nuestros Valores</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Los pilares fundamentales que guían nuestra institución.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Excelencia -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/20 hover:border-primary transition-colors duration-300 text-center">
+<div class="w-16 h-16 mx-auto bg-surface-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-3">Excelencia</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Buscamos la máxima calidad en cada aspecto de nuestra oferta educativa, desde el currículo hasta la experiencia del estudiante.
+                        </p>
+</div>
+<!-- Innovación -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/20 hover:border-primary transition-colors duration-300 text-center">
+<div class="w-16 h-16 mx-auto bg-surface-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-3">Innovación</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Nos adaptamos ágilmente a las nuevas tecnologías y metodologías para ofrecer siempre conocimientos de vanguardia.
+                        </p>
+</div>
+<!-- Integridad -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/20 hover:border-primary transition-colors duration-300 text-center">
+<div class="w-16 h-16 mx-auto bg-surface-container rounded-full flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">handshake</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-on-background mb-3">Integridad</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Actuamos con transparencia, ética y responsabilidad en todas nuestras interacciones y procesos académicos.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Final -->
+<section class="py-24 bg-surface relative overflow-hidden border-t border-outline-variant/20">
+<div class="absolute inset-0 pattern-circuits pointer-events-none"></div>
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
+<h2 class="font-headline-lg text-headline-lg text-on-background mb-6">¿Listo para impulsar tu carrera?</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                    Descubre nuestros programas intensivos y únete a la próxima generación de expertos en tecnología.
+                </p>
+<button class="bg-primary text-on-primary font-bold font-body-lg text-body-lg px-8 py-4 rounded-lg hover:bg-primary/90 transition-colors shadow-sm inline-flex items-center gap-2">
+                    Ver Cursos Disponibles
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full py-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop max-w-max-width mx-auto">
+<!-- Brand / Copyright Column -->
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface mb-4">
+                    ITECT
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-surface-variant opacity-80">
+                    © 2024 ITECT Instituto Tecnológico. Todos los derechos reservados.
+                </p>
+<!-- Trust Badge Example -->
+<div class="mt-6 inline-flex items-center gap-2 border border-outline-variant/40 px-3 py-1.5 rounded-md bg-surface/50">
+<span class="material-symbols-outlined text-primary text-sm">verified</span>
+<span class="font-label-md text-label-md text-on-surface-variant">Educación Certificada</span>
+</div>
+</div>
+<!-- Links Columns -->
+<div class="col-span-1 flex flex-col gap-3 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all hover:opacity-80" href="#">Aviso Legal</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all hover:opacity-80" href="#">Política de Privacidad</a>
+</div>
+<div class="col-span-1 flex flex-col gap-3 font-body-md text-body-md">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all hover:opacity-80" href="#">Cookies</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-primary-fixed underline transition-all hover:opacity-80" href="#">Términos de Servicio</a>
+</div>
+</div>
+</footer>
+</body></html>
